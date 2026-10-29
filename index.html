@@ -451,7 +451,7 @@
         }
     </style>
 </head>
-<script src="handy-export.js"></script>
+
 <body>
     <header><span class="ver">V1 Consolidated</span>
         <h1>FamilyHub</h1>
@@ -538,6 +538,9 @@
         function needed() { let a = []; DAYS.forEach((_, i) => menuById(plan[i].menuId)?.ingredients.forEach(x => a.push(x))); return [...new Set(a)].sort() } function renderShopping() { let have = $('bring').value.split(/\n|,|;/).map(x => x.trim().toLowerCase()).filter(Boolean); $('missing').innerHTML = needed().filter(x => !have.includes(x.toLowerCase())).map(x => `<li>${x}</li>`).join('') || '<li>Alles vorhanden</li>' } async function copyMissing() { renderShopping(); let t = [...$('missing').querySelectorAll('li')].map(x => x.textContent).join('\n'); try { await navigator.clipboard.writeText(t); alert('Kopiert') } catch { prompt('Kopieren', t) } } function download(name, o) { let a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(o, null, 2)], { type: 'application/json' })); a.download = name; a.click(); URL.revokeObjectURL(a.href) } function normalizeMaster(data) { let arr = Array.isArray(data) ? data : (data.menus || data.master || data.items); if (!Array.isArray(arr)) throw new Error('Keine Menüliste gefunden'); return arr.map((m, i) => ({ id: m.id || `M${String(i + 1).padStart(3, '0')}`, name: m.name || m.menu || `Menü ${i + 1}`, categories: m.categories || m.category || ['Sonstiges'], minutes: m.minutes ?? m.activeMinutes ?? 20, modes: m.modes || ['Flexibel'], ingredients: m.ingredients || [], active: m.active !== false })) }
         function readJson(e, cb) { let f = e.target.files[0]; if (!f) return; let r = new FileReader(); r.onload = () => { try { let txt = String(r.result).replace(/^\uFEFF/, '').trim(); let parsed = JSON.parse(txt); if (e.target.id === 'importMaster') parsed = normalizeMaster(parsed); cb(parsed); e.target.value = '' } catch (err) { alert('Import nicht möglich: ' + err.message) } }; r.readAsText(f) } init();
     </script>
+    
+    <script src="handy-export.js"></script>
+    
 </body>
 
 </html>

@@ -454,7 +454,7 @@
 </head>
 
 <body>
-    <header><span class="ver">V1 Consolidated</span>
+    <header><span class="ver">V2 Safari</span>
         <h1>FamilyHub</h1>
         <div>Montag bis Montag · Menü-Master · Kühlschrankplan</div>
     </header>
@@ -462,11 +462,10 @@
             data-tab="fridge">Kühlschrank</button><button data-tab="master">Menü-Master</button><button
             data-tab="shopping">Einkauf</button></nav>
     <main>
-        <section id="workspacePanel" class="panel" style="margin-bottom:12px"><div class="toolbar"><button id="chooseWorkspace" type="button" class="primary">📁 FamilyHub-Ordner verbinden</button><button id="loadWorkspace" type="button">↻ Daten aus Ordner laden</button><span id="workspaceStatus" class="small">Kein Arbeitsordner verbunden</span></div></section>
         <section id="plan" class="tab active">
             <div class="toolbar"><label>Planstart Montag<input id="startDate" type="date"></label><button id="go"
                     class="primary">GO</button><button id="printBtn">Kühlschrank drucken</button><button
-                    id="exportPlan">Plan sichern</button><button id="importPlanBtn">Plan laden</button><input
+                    id="exportPlan">Plan speichern</button><button id="importPlanBtn">Plan laden</button><input
                     id="importPlan" class="hidden" type="file" accept="application/json"></div>
             <div id="cards" class="cards"></div>
         </section>
@@ -491,7 +490,7 @@
                         <option>Poulet/Fleisch</option>
                         <option>Vegetarisch/Ei</option>
                         <option>Beilage</option>
-                    </select><button id="exportMaster">Export</button><button id="importMasterBtn">Import</button><input
+                    </select><button id="exportMaster">Menümaster speichern</button><button id="importMasterBtn">Menümaster laden</button><input
                         id="importMaster" class="hidden" type="file" accept="application/json"></div>
                 <div id="editForm" class="formgrid" style="margin-top:12px"><input id="fName"
                         placeholder="Menüname"><input id="fMinutes" type="number" placeholder="Minuten"><select
@@ -541,7 +540,6 @@
         function readJson(e, cb) { let f = e.target.files[0]; if (!f) return; let r = new FileReader(); r.onload = () => { try { let txt = String(r.result).replace(/^\uFEFF/, '').trim(); let parsed = JSON.parse(txt); if (e.target.id === 'importMaster') parsed = normalizeMaster(parsed); cb(parsed); e.target.value = '' } catch (err) { alert('Import nicht möglich: ' + err.message) } }; r.readAsText(f) } init();
     </script>
     
-    <script src="workspace.js"></script>
     <script src="handy-export.js"></script>
     
 </body>

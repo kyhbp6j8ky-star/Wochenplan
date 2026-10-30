@@ -1,89 +1,126 @@
 (() => {
+  const VIEWER_KEY = 'familyhub_viewer_plan_v2';
   const COLORS = ['#95d5a4','#ffd54f','#7cc5f7','#b69cff','#ff8f8f','#ffb56b','#7ddfd0'];
+  const isPhone = () => window.matchMedia('(max-width: 700px)').matches;
 
-  const esc = (value = '') => String(value).replace(/[&<>"']/g, ch => ({
-    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-  }[ch]));
-
-  function buildMobileHtml() {
-    // Use the already-rendered FamilyHub plan as the source of truth.
+  function compactExport() {
     if (typeof renderFridge === 'function') renderFridge();
-
-    const sourceCards = [...document.querySelectorAll('#weekGrid .weekCard')];
-    if (!sourceCards.length) {
-      throw new Error('Im Kühlschrankplan wurden keine Tageskarten gefunden.');
-    }
-
-    const title = document.getElementById('weekTitle')?.textContent?.trim() || 'Menüplan';
-    const dates = document.getElementById('weekDates')?.textContent?.trim() || '';
-
-    const cards = sourceCards.map((card, index) => {
-      const heading = card.querySelector('h3')?.innerHTML || '';
-      const events = card.querySelector('.weekEvents')?.innerHTML || '&nbsp;';
-      const meal = card.querySelector('.weekMeal')?.innerHTML || '&nbsp;';
-      return `<article class="day" style="--day:${COLORS[index % 7]}">
-        <header>${heading}</header>
-        <section class="events">${events}</section>
-        <section class="meal">${meal}</section>
-      </article>`;
-    });
-
-    const week1 = cards.slice(0, 7).join('');
-    const week2 = cards.slice(7, 14).join('');
-
-    return `<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#1f4e79">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="FamilyHub">
-<title>FamilyHub – ${esc(title)}</title>
-<style>
-*{box-sizing:border-box}html{background:#eef5fb}body{max-width:760px;margin:0 auto;padding:env(safe-area-inset-top) 12px calc(24px + env(safe-area-inset-bottom));font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#eef5fb}.top{position:sticky;top:0;z-index:2;padding:14px 3px 10px;background:rgba(238,245,251,.94);backdrop-filter:blur(12px)}.top h1{margin:0;color:#1f4e79;font-size:27px}.top h2{margin:4px 0 0;font-size:16px}.top p{margin:3px 0 0;color:#53657a;font-weight:650}.week-title{margin:16px 3px 8px;color:#1f4e79;font-size:16px}.week{display:grid;gap:11px}.day{background:var(--day);border:1px solid rgba(31,78,121,.22);border-radius:20px;padding:13px;box-shadow:0 8px 24px rgba(32,56,78,.10)}.day header{color:#174d78;font-size:20px;font-weight:850;line-height:1.15}.day header small{font-size:13px}.events{min-height:52px;margin:10px 0;padding:10px;border-radius:13px;background:rgba(255,255,255,.78)}.weekEvent{margin:3px 0;line-height:1.28}.meal{min-height:48px;padding:11px;border-radius:13px;background:rgba(255,255,255,.88);color:#173b60;font-size:17px;font-weight:850;line-height:1.25}@media(min-width:700px){.week{grid-template-columns:repeat(2,1fr)}}
-</style>
-</head>
-<body>
-  <div class="top"><h1>FamilyHub</h1><h2>${esc(title)}</h2><p>${esc(dates)}</p></div>
-  <h3 class="week-title">Woche 1</h3><main class="week">${week1}</main>
-  <h3 class="week-title">Woche 2</h3><main class="week">${week2}</main>
-</body>
-</html>`;
+    const days = [...document.querySelectorAll('#weekGrid .weekCard')].map((card, index) => ({
+      day: card.querySelector('h3')?.childNodes[0]?.textContent?.trim() || DAYS[index] || '',
+      date: card.querySelector('h3 small')?.textContent?.trim() || '',
+      eventsHtml: card.querySelector('.weekEvents')?.innerHTML || '&nbsp;',
+      mealHtml: card.querySelector('.weekMeal')?.innerHTML || '&nbsp;'
+    }));
+    return {
+      format: 'FamilyHubViewer',
+      version: 2,
+      exportedAt: new Date().toISOString(),
+      title: document.getElementById('weekTitle')?.textContent?.trim() || 'Wochenplan',
+      dates: document.getElementById('weekDates')?.textContent?.trim() || '',
+      days
+    };
   }
 
-  function exportMobileHtml() {
-    try {
-      const html = buildMobileHtml();
-      const blob = new Blob([html], {type:'text/html;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'mobile.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-    } catch (error) {
-      alert('Handyplan konnte nicht exportiert werden: ' + error.message);
-    }
+  function downloadViewerPlan() {
+    const data = compactExport();
+    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'FamilyHub-Wochenplan.json';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
   }
 
-  function addButton() {
+  function addDesktopButton() {
     const toolbar = document.querySelector('#plan .toolbar');
-    if (!toolbar || document.getElementById('exportMobileHtml')) return;
-    const button = document.createElement('button');
-    button.id = 'exportMobileHtml';
-    button.type = 'button';
-    button.textContent = '📱 Handyplan HTML';
-    button.addEventListener('click', exportMobileHtml);
-    toolbar.appendChild(button);
+    if (!toolbar || document.getElementById('exportViewerPlan')) return;
+    const b = document.createElement('button');
+    b.id = 'exportViewerPlan';
+    b.type = 'button';
+    b.textContent = '📱 Für Handys speichern';
+    b.addEventListener('click', downloadViewerPlan);
+    toolbar.appendChild(b);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', addButton);
-  } else {
-    addButton();
+  function viewerShell() {
+    if (document.getElementById('phoneViewer')) return;
+    const root = document.createElement('div');
+    root.id = 'phoneViewer';
+    root.innerHTML = `
+      <div class="viewerTop">
+        <div><h1>FamilyHub</h1><p id="viewerSubtitle">Noch keine Woche geladen</p></div>
+        <button id="viewerImportBtn" type="button">📂 Neue Woche laden</button>
+        <input id="viewerImport" type="file" accept="application/json,.json" hidden>
+      </div>
+      <div id="viewerStatus" class="viewerStatus">Wähle einmal eure gemeinsame <b>FamilyHub-Wochenplan.json</b>. Danach bleibt der Plan auf diesem iPhone gespeichert.</div>
+      <main id="viewerDays" class="viewerDays"></main>`;
+    document.body.appendChild(root);
+    document.getElementById('viewerImportBtn').onclick = () => document.getElementById('viewerImport').click();
+    document.getElementById('viewerImport').onchange = importViewerPlan;
   }
+
+  function importViewerPlan(event) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(String(reader.result).replace(/^\uFEFF/, '').trim());
+        if (data.format !== 'FamilyHubViewer' || !Array.isArray(data.days)) throw new Error('Keine gültige FamilyHub-Handydatei.');
+        localStorage.setItem(VIEWER_KEY, JSON.stringify(data));
+        renderViewer(data);
+      } catch (error) {
+        alert('Wochenplan konnte nicht geladen werden: ' + error.message);
+      } finally {
+        event.target.value = '';
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function renderViewer(data) {
+    const subtitle = document.getElementById('viewerSubtitle');
+    const status = document.getElementById('viewerStatus');
+    const grid = document.getElementById('viewerDays');
+    if (!data) {
+      subtitle.textContent = 'Noch keine Woche geladen';
+      status.style.display = 'block';
+      grid.innerHTML = '';
+      return;
+    }
+    subtitle.textContent = `${data.title || 'Wochenplan'} · ${data.dates || ''}`;
+    status.style.display = 'none';
+    grid.innerHTML = data.days.map((d, i) => `
+      ${i === 0 || i === 7 ? `<h2 class="viewerWeek">Woche ${i === 0 ? 1 : 2}</h2>` : ''}
+      <article class="viewerDay" style="--day:${COLORS[i % 7]}">
+        <header><h2>${escapeHtml(d.day)}</h2><span>${escapeHtml(d.date)}</span></header>
+        <section class="viewerEvents">${d.eventsHtml || '&nbsp;'}</section>
+        <section class="viewerMeal">${d.mealHtml || '&nbsp;'}</section>
+      </article>`).join('');
+  }
+
+  function escapeHtml(value='') {
+    return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function startPhoneViewer() {
+    document.documentElement.classList.add('phone-viewer-mode');
+    viewerShell();
+    try { renderViewer(JSON.parse(localStorage.getItem(VIEWER_KEY) || 'null')); }
+    catch { renderViewer(null); }
+  }
+
+  function boot() {
+    if (isPhone()) startPhoneViewer();
+    else addDesktopButton();
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
 })();

@@ -16,9 +16,10 @@
     {
       "id": "K001",
       "name": "Eier",
-      "type": "Hauptspeise",
+      "type": "Beilage",
       "category": "Ei",
       "usage": [
+        "Beilage",
         "Zutat"
       ],
       "ingredients": [
@@ -726,7 +727,8 @@
       "type": "Zutat",
       "category": "Vegi / Käse",
       "usage": [
-        "Zutat"
+        "Zutat",
+        "Beilage"
       ],
       "ingredients": [
         "Parmesan"
@@ -811,6 +813,306 @@
         "RecipeMaster R001"
       ],
       "recipeId": "R001"
+    },
+    {
+      "id": "K051",
+      "name": "Spätzli",
+      "type": "Beilage",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K052",
+      "name": "Aubergine",
+      "type": "Zutat",
+      "category": "Gemüse",
+      "usage": [
+        "Zutat",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K053",
+      "name": "Peperoni",
+      "type": "Zutat",
+      "category": "Gemüse",
+      "usage": [
+        "Zutat",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K054",
+      "name": "Lauch",
+      "type": "Zutat",
+      "category": "Gemüse",
+      "usage": [
+        "Zutat",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K055",
+      "name": "Wirz",
+      "type": "Zutat",
+      "category": "Gemüse",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K056",
+      "name": "Schinken Käse Toast",
+      "type": "Gericht",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K057",
+      "name": "Pouletsteak",
+      "type": "Hauptspeise",
+      "category": "Poulet",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K058",
+      "name": "Pizza TK",
+      "type": "Hauptspeise",
+      "category": "Fertig Gericht",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K059",
+      "name": "Pizza Tonno",
+      "type": "Hauptspeise",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K060",
+      "name": "Spinat TK",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K061",
+      "name": "Salatkäse",
+      "type": "Zutat",
+      "category": "Käse",
+      "usage": [
+        "Zutat",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K062",
+      "name": "Käsekuchen",
+      "type": "Hauptspeise",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K063",
+      "name": "Schweinsbratwurst",
+      "type": "Hauptspeise",
+      "category": "Schwein",
+      "usage": [
+        "Hauptspeise",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K064",
+      "name": "Kalbsbratwurst",
+      "type": "Hauptspeise",
+      "category": "Kalb",
+      "usage": [
+        "Hauptspeise",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K065",
+      "name": "Zwiebelsauce",
+      "type": "Extra",
+      "category": "Sauce",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K066",
+      "name": "Rahmsauce",
+      "type": "Extra",
+      "category": "Sauce",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K067",
+      "name": "Rotweinsauce",
+      "type": "Extra",
+      "category": "Sauce",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K068",
+      "name": "Wienerli im Teig",
+      "type": "Hauptspeise",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K069",
+      "name": "Thon Baguette",
+      "type": "Gericht",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K070",
+      "name": "Flamkuchen",
+      "type": "Hauptspeise",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Hauptspeise",
+        "Beilage"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K071",
+      "name": "Auswärts Essen",
+      "type": "Gericht",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
+    },
+    {
+      "id": "K072",
+      "name": "Härdöpfelblech",
+      "type": "Beilage",
+      "category": "Noch zuordnen",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Aubergine",
+        "Lauch",
+        "Peperoni",
+        "Salatkäse"
+      ],
+      "source": [
+        "FamilyHub Eingabemaske"
+      ]
     }
   ],
   "dropdownBasis": {

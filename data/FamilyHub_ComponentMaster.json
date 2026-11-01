@@ -1,1 +1,1106 @@
-
+{
+  "format": "FamilyHubComponentMaster",
+  "version": 7,
+  "allowedTypes": [
+    "Hauptspeise",
+    "Beilage",
+    "Extra",
+    "Gericht",
+    "Zutat"
+  ],
+  "model": {
+    "menu": "besteht aus Hauptspeise, Beilage und optional Extra oder wird als Gericht direkt verwendet",
+    "ingredient": "Zutat ist die unterste Ebene für Einkauf und spätere Rezeptdetails"
+  },
+  "components": [
+    {
+      "id": "K001",
+      "name": "Eier",
+      "type": "Hauptspeise",
+      "category": "Ei",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [
+        "Eier"
+      ],
+      "sourceMenus": [
+        "M001",
+        "M002",
+        "M003"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K002",
+      "name": "Spinat",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Spinat"
+      ],
+      "sourceMenus": [
+        "M001"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K003",
+      "name": "Salat",
+      "type": "Beilage",
+      "category": "Salat",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M001",
+        "M003",
+        "M004",
+        "M005",
+        "M007",
+        "M008",
+        "M009",
+        "M010"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K004",
+      "name": "Nudelsuppe",
+      "type": "Gericht",
+      "category": "Suppe",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M002"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K005",
+      "name": "Gemüse",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M002",
+        "M004",
+        "M005",
+        "M008"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K006",
+      "name": "Brot",
+      "type": "Beilage",
+      "category": "Brot / Wraps",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Brot"
+      ],
+      "sourceMenus": [
+        "M003"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K007",
+      "name": "Käse",
+      "type": "Hauptspeise",
+      "category": "Vegi / Käse",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [
+        "Käse"
+      ],
+      "sourceMenus": [
+        "M003"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K008",
+      "name": "Thon",
+      "type": "Hauptspeise",
+      "category": "Fisch",
+      "usage": [
+        "Hauptspeise",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Thon"
+      ],
+      "sourceMenus": [
+        "M003",
+        "M009"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K009",
+      "name": "Bulgur",
+      "type": "Beilage",
+      "category": "Reis / Getreide",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Bulgur"
+      ],
+      "sourceMenus": [
+        "M004"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K010",
+      "name": "Poulet",
+      "type": "Hauptspeise",
+      "category": "Geflügel",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M004",
+        "M007"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K011",
+      "name": "Feta",
+      "type": "Hauptspeise",
+      "category": "Vegi / Käse",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [
+        "Feta"
+      ],
+      "sourceMenus": [
+        "M004"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K012",
+      "name": "Pouletbrust",
+      "type": "Hauptspeise",
+      "category": "Geflügel",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M005"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K013",
+      "name": "Kartoffeln",
+      "type": "Beilage",
+      "category": "Kartoffeln",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Kartoffeln"
+      ],
+      "sourceMenus": [
+        "M005"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K014",
+      "name": "Fisch Bordelaise",
+      "type": "Hauptspeise",
+      "category": "Fisch",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M006"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K015",
+      "name": "TK-Gemüse",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M006"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K016",
+      "name": "Reis",
+      "type": "Beilage",
+      "category": "Reis / Getreide",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M006"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K017",
+      "name": "Wraps",
+      "type": "Beilage",
+      "category": "Brot / Wraps",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M007"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K018",
+      "name": "Mais",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M007",
+        "M008"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K019",
+      "name": "Tomaten",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [
+        "Tomaten"
+      ],
+      "sourceMenus": [
+        "M007"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K020",
+      "name": "Grillfleisch",
+      "type": "Hauptspeise",
+      "category": "Fleisch",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M008"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K021",
+      "name": "Pasta",
+      "type": "Beilage",
+      "category": "Pasta / Nudeln",
+      "usage": [
+        "Beilage",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Pasta"
+      ],
+      "sourceMenus": [
+        "M009"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K022",
+      "name": "Tomatensauce",
+      "type": "Extra",
+      "category": "Sauce / Extra",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M009"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K023",
+      "name": "Calabrese",
+      "type": "Extra",
+      "category": "Sauce / Extra",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M009"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K024",
+      "name": "Spinatwähe",
+      "type": "Gericht",
+      "category": "Gericht",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [
+        "M010"
+      ],
+      "source": [
+        "geprüfter ComponentMaster"
+      ]
+    },
+    {
+      "id": "K025",
+      "name": "Rind",
+      "type": "Hauptspeise",
+      "category": "Rind",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K026",
+      "name": "Fisch",
+      "type": "Hauptspeise",
+      "category": "Fisch",
+      "usage": [
+        "Hauptspeise"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K027",
+      "name": "Tortellini",
+      "type": "Beilage",
+      "category": "Pasta / Nudeln",
+      "usage": [
+        "Beilage",
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ],
+      "reviewNote": "Beilage oder Gericht"
+    },
+    {
+      "id": "K028",
+      "name": "Pizza",
+      "type": "Gericht",
+      "category": "Gericht",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K029",
+      "name": "Burger",
+      "type": "Gericht",
+      "category": "Gericht",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K030",
+      "name": "Suppe",
+      "type": "Gericht",
+      "category": "Suppe",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K031",
+      "name": "Auflauf",
+      "type": "Gericht",
+      "category": "Gericht",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K032",
+      "name": "Wok",
+      "type": "Gericht",
+      "category": "Gericht",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K033",
+      "name": "Brokkoli",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K034",
+      "name": "Blumenkohl",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K035",
+      "name": "Zucchetti",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K036",
+      "name": "Karotten",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K037",
+      "name": "Polenta",
+      "type": "Beilage",
+      "category": "Reis / Getreide",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K038",
+      "name": "Rösti",
+      "type": "Beilage",
+      "category": "Kartoffeln",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K039",
+      "name": "Pommes",
+      "type": "Beilage",
+      "category": "Kartoffeln",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K040",
+      "name": "Nudeln",
+      "type": "Beilage",
+      "category": "Pasta / Nudeln",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K041",
+      "name": "Härdöpfel",
+      "type": "Beilage",
+      "category": "Kartoffeln",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K042",
+      "name": "Quinoa",
+      "type": "Beilage",
+      "category": "Reis / Getreide",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K043",
+      "name": "Couscous",
+      "type": "Beilage",
+      "category": "Reis / Getreide",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K044",
+      "name": "Bohnen",
+      "type": "Beilage",
+      "category": "Gemüse",
+      "usage": [
+        "Beilage"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K045",
+      "name": "Parmesan",
+      "type": "Zutat",
+      "category": "Vegi / Käse",
+      "usage": [
+        "Zutat"
+      ],
+      "ingredients": [
+        "Parmesan"
+      ],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ],
+      "reviewNote": "Zutat"
+    },
+    {
+      "id": "K046",
+      "name": "Dessert",
+      "type": "Extra",
+      "category": "Dessert",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K047",
+      "name": "Früchte",
+      "type": "Extra",
+      "category": "Früchte",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K048",
+      "name": "Snack",
+      "type": "Extra",
+      "category": "Snack",
+      "usage": [
+        "Extra"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ]
+    },
+    {
+      "id": "K049",
+      "name": "Sauce",
+      "type": "Extra",
+      "category": "Sauce / Extra",
+      "usage": [
+        "Extra",
+        "Zutat"
+      ],
+      "ingredients": [
+        "Sauce"
+      ],
+      "sourceMenus": [],
+      "source": [
+        "Wochenplan Dropdown-Basis"
+      ],
+      "reviewNote": "Extra oder Zutat"
+    },
+    {
+      "id": "K050",
+      "name": "Party-Filet",
+      "type": "Gericht",
+      "category": "Fleisch",
+      "usage": [
+        "Gericht"
+      ],
+      "ingredients": [],
+      "sourceMenus": [],
+      "source": [
+        "RecipeMaster R001"
+      ],
+      "recipeId": "R001"
+    }
+  ],
+  "dropdownBasis": {
+    "Hauptspeise": [
+      "Poulet",
+      "Rind",
+      "Fisch",
+      "Pasta",
+      "Reis",
+      "Kartoffeln",
+      "Tortellini",
+      "Pizza",
+      "Burger",
+      "Suppe",
+      "Salat",
+      "Auflauf",
+      "Wok",
+      "Gefriertruhe",
+      "Reste",
+      "Selbstgemacht",
+      "Auswärts"
+    ],
+    "Beilage": [
+      "Gemüse",
+      "Salat",
+      "Spinat",
+      "Brokkoli",
+      "Blumenkohl",
+      "Zucchetti",
+      "Karotten",
+      "Mais",
+      "Polenta",
+      "Rösti",
+      "Pommes",
+      "Reis",
+      "Nudeln",
+      "Brot",
+      "Härdöpfel",
+      "Quinoa",
+      "Couscous",
+      "Bohnen",
+      "Parmesan",
+      "ohne"
+    ],
+    "Extra": [
+      "Dessert",
+      "Suppe",
+      "Früchte",
+      "Snack",
+      "Sauce",
+      "scharf",
+      "Meal Prep",
+      "Schnell",
+      "Proteinreich",
+      "Leicht",
+      "Zum Aufbrauchen",
+      "Einfach",
+      "Auf Vorrat",
+      "Besuch",
+      "Feierabendküche"
+    ]
+  },
+  "planningTags": [
+    "Auf Vorrat",
+    "Auswärts",
+    "Besuch",
+    "Einfach",
+    "Feierabendküche",
+    "Gefriertruhe",
+    "Leicht",
+    "Meal Prep",
+    "Proteinreich",
+    "Reste",
+    "Schnell",
+    "Selbstgemacht",
+    "Zum Aufbrauchen",
+    "ohne",
+    "scharf"
+  ],
+  "legacyMenus": [
+    {
+      "id": "M001",
+      "name": "Rührei mit Spinat und Salat",
+      "categories": [
+        "Vegetarisch/Ei"
+      ],
+      "minutes": 25,
+      "modes": [
+        "Schnell",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Eier",
+        "Spinat",
+        "Salat"
+      ],
+      "active": true
+    },
+    {
+      "id": "M002",
+      "name": "Nudelsuppe mit Ei und Gemüse",
+      "categories": [
+        "Schnell"
+      ],
+      "minutes": 30,
+      "modes": [
+        "Prep",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Nudelsuppe",
+        "Eier",
+        "Gemüse"
+      ],
+      "active": true
+    },
+    {
+      "id": "M003",
+      "name": "Café complet mit Thon, Ei oder Käse",
+      "categories": [
+        "Schnell"
+      ],
+      "minutes": 15,
+      "modes": [
+        "Schnell",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Brot",
+        "Käse",
+        "Thon",
+        "Eier",
+        "Salat"
+      ],
+      "active": true
+    },
+    {
+      "id": "M004",
+      "name": "Bulgur-Bowl mit Poulet oder Feta",
+      "categories": [
+        "Poulet/Fleisch",
+        "Beilage"
+      ],
+      "minutes": 25,
+      "modes": [
+        "Prep",
+        "Leicht/Protein"
+      ],
+      "ingredients": [
+        "Bulgur",
+        "Poulet",
+        "Feta",
+        "Salat",
+        "Gemüse"
+      ],
+      "active": true
+    },
+    {
+      "id": "M005",
+      "name": "Pouletbrust aus dem Ofen mit Gemüseblech",
+      "categories": [
+        "Poulet/Fleisch"
+      ],
+      "minutes": 30,
+      "modes": [
+        "Prep",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Pouletbrust",
+        "Kartoffeln",
+        "Gemüse",
+        "Salat"
+      ],
+      "active": true
+    },
+    {
+      "id": "M006",
+      "name": "Fisch Bordelaise mit TK-Gemüse und Reis",
+      "categories": [
+        "Fisch"
+      ],
+      "minutes": 20,
+      "modes": [
+        "Schnell",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Fisch Bordelaise",
+        "TK-Gemüse",
+        "Reis"
+      ],
+      "active": true
+    },
+    {
+      "id": "M007",
+      "name": "Wraps mit Poulet, Salat und Mais",
+      "categories": [
+        "Poulet/Fleisch",
+        "Schnell"
+      ],
+      "minutes": 20,
+      "modes": [
+        "Schnell",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Wraps",
+        "Poulet",
+        "Salat",
+        "Mais",
+        "Tomaten"
+      ],
+      "active": true
+    },
+    {
+      "id": "M008",
+      "name": "Grill + Salat",
+      "categories": [
+        "Poulet/Fleisch",
+        "Flexibel"
+      ],
+      "minutes": 25,
+      "modes": [
+        "Flexibel",
+        "Offen"
+      ],
+      "ingredients": [
+        "Grillfleisch",
+        "Salat",
+        "Mais",
+        "Gemüse"
+      ],
+      "active": true
+    },
+    {
+      "id": "M009",
+      "name": "Pasta mit Tomatensauce, Thon oder Calabrese und Salat",
+      "categories": [
+        "Beilage",
+        "Schnell"
+      ],
+      "minutes": 20,
+      "modes": [
+        "Schnell",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Pasta",
+        "Tomatensauce",
+        "Thon",
+        "Calabrese",
+        "Salat"
+      ],
+      "active": true
+    },
+    {
+      "id": "M010",
+      "name": "Spinatwähe mit Salat",
+      "categories": [
+        "Vegetarisch/Ei"
+      ],
+      "minutes": 25,
+      "modes": [
+        "Prep",
+        "Flexibel"
+      ],
+      "ingredients": [
+        "Spinatwähe",
+        "Salat"
+      ],
+      "active": true
+    },
+    {
+      "id": "C1793467481581",
+      "name": "Auswärts Essen",
+      "categories": [
+        "Poulet/Fleisch"
+      ],
+      "minutes": 20,
+      "modes": [
+        "Offen",
+        "Flexibel"
+      ],
+      "ingredients": [],
+      "active": true
+    }
+  ],
+  "preparationOptions": [
+    "Grill"
+  ],
+  "recipeMasterFile": "data/FamilyHub_RecipeMaster.json"
+}

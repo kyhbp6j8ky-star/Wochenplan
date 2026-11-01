@@ -1,0 +1,44 @@
+{
+  "format": "FamilyHubRecipeMaster",
+  "version": 1,
+  "recipes": [
+    {
+      "id": "R001",
+      "name": "Party-Filet",
+      "source": {
+        "title": "Party-Filet - Rezept | Betty Bossi",
+        "url": "https://www.bettybossi.ch/de/rezepte/rezept/party-filet-10002084/"
+      },
+      "portions": 4,
+      "prepMinutes": 20,
+      "cookMinutes": 15,
+      "components": [
+        "Schweinsfilet",
+        "Bratspeck",
+        "Rahmsauce"
+      ],
+      "ingredients": [
+        {"name": "Schweinsfilet", "amount": 500, "unit": "g"},
+        {"name": "Paprika", "amount": 0.5, "unit": "TL"},
+        {"name": "Salz", "amount": 0.5, "unit": "TL"},
+        {"name": "Pfeffer", "amount": null, "unit": "wenig"},
+        {"name": "Bratspeck", "amount": 12, "unit": "Tranchen"},
+        {"name": "Rahm", "amount": 2, "unit": "dl"},
+        {"name": "Ketchup", "amount": 1.5, "unit": "EL"},
+        {"name": "Cognac", "amount": 1, "unit": "EL"}
+      ],
+      "instructions": [
+        "Backofen auf 220 °C vorheizen. Schweinsfilet in 12 gleich dicke Medaillons schneiden und würzen.",
+        "Medaillons mit Bratspeck umwickeln und in eine gefettete, ofenfeste Form stellen.",
+        "In der unteren Ofenhälfte etwa 15 Minuten braten.",
+        "Rahm steif schlagen, mit Ketchup, Cognac und Pfeffer vermengen und auf dem Fleisch verteilen."
+      ],
+      "servingSuggestions": ["Nudeln", "Trockenreis"],
+      "notes": [
+        "Gemäss Quelle für eine weite, gefettete ofenfeste Form von ca. 2 Litern.",
+        "Als Alternative kann Kalbsfilet verwendet werden.",
+        "Das Fleisch kann einige Stunden im Voraus ofenfertig vorbereitet und zugedeckt kühl aufbewahrt werden."
+      ]
+    }
+  ]
+}

@@ -18,14 +18,46 @@
         "Rahmsauce"
       ],
       "ingredients": [
-        {"name": "Schweinsfilet", "amount": 500, "unit": "g"},
-        {"name": "Paprika", "amount": 0.5, "unit": "TL"},
-        {"name": "Salz", "amount": 0.5, "unit": "TL"},
-        {"name": "Pfeffer", "amount": null, "unit": "wenig"},
-        {"name": "Bratspeck", "amount": 12, "unit": "Tranchen"},
-        {"name": "Rahm", "amount": 2, "unit": "dl"},
-        {"name": "Ketchup", "amount": 1.5, "unit": "EL"},
-        {"name": "Cognac", "amount": 1, "unit": "EL"}
+        {
+          "name": "Schweinsfilet",
+          "amount": 500,
+          "unit": "g"
+        },
+        {
+          "name": "Paprika",
+          "amount": 0.5,
+          "unit": "TL"
+        },
+        {
+          "name": "Salz",
+          "amount": 0.5,
+          "unit": "TL"
+        },
+        {
+          "name": "Pfeffer",
+          "amount": null,
+          "unit": "wenig"
+        },
+        {
+          "name": "Bratspeck",
+          "amount": 12,
+          "unit": "Tranchen"
+        },
+        {
+          "name": "Rahm",
+          "amount": 2,
+          "unit": "dl"
+        },
+        {
+          "name": "Ketchup",
+          "amount": 1.5,
+          "unit": "EL"
+        },
+        {
+          "name": "Cognac",
+          "amount": 1,
+          "unit": "EL"
+        }
       ],
       "instructions": [
         "Backofen auf 220 °C vorheizen. Schweinsfilet in 12 gleich dicke Medaillons schneiden und würzen.",
@@ -33,12 +65,33 @@
         "In der unteren Ofenhälfte etwa 15 Minuten braten.",
         "Rahm steif schlagen, mit Ketchup, Cognac und Pfeffer vermengen und auf dem Fleisch verteilen."
       ],
-      "servingSuggestions": ["Nudeln", "Trockenreis"],
+      "servingSuggestions": [
+        "Nudeln",
+        "Trockenreis"
+      ],
       "notes": [
         "Gemäss Quelle für eine weite, gefettete ofenfeste Form von ca. 2 Litern.",
         "Als Alternative kann Kalbsfilet verwendet werden.",
         "Das Fleisch kann einige Stunden im Voraus ofenfertig vorbereitet und zugedeckt kühl aufbewahrt werden."
       ]
+    },
+    {
+      "id": "R002",
+      "name": "Capuns",
+      "servings": 4,
+      "prepMinutes": 0,
+      "ovenMinutes": 0,
+      "ovenTemperatureC": 0,
+      "image": {
+        "path": "data/recipes/R002.jpg",
+        "alt": "Capuns"
+      },
+      "ingredients": [],
+      "stepsSummary": [],
+      "source": {
+        "name": "Quelle",
+        "url": "https://www.bettybossi.ch/de/rezepte/rezept/capuns-mit-salsiz-10004248/"
+      }
     }
   ]
 }
